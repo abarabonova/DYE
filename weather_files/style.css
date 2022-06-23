@@ -1,0 +1,193 @@
+@font-face {
+	font-family: "Suisse";
+  src: url("./font/SuisseIntl-Book.otf") format("truetype");
+}
+
+/* ОБЩЕЕ */
+
+html,
+body {
+	height: 100%;
+	background-image: url('../weather_files/sky.png');
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	cursor: url("cursor-gradient.png"), auto;
+}
+
+body * {
+	border: 0;
+	padding: 0;
+	font-family: 'Suisse';
+  font-weight: 500;
+  font-size: 72px;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -0.8px;
+	cursor: url("cursor-gradient.png"), auto;
+}
+
+input {
+	height: 32px;
+	width: 30%;
+	padding: 20px;
+
+	font-size: 20px;
+	letter-spacing: -0.3px;
+	text-transform: none;
+
+	box-shadow: 0px 0px 40px #FFFFFF;
+	border-radius: 60px;
+
+	border: 1px solid rgba(255, 255, 255, 0.6);
+	background: rgba(255, 255, 255, 0.7);
+}
+
+input:hover {
+	background: rgba(255, 255, 255, 0.65);
+}
+
+input:focus-visible {
+  outline: -webkit-focus-ring-color auto 0px;
+	box-shadow: 0px 0px 80px #FFFFFF;
+}
+
+#zip {
+	width: 100%;
+	position: fixed;
+	z-index: 5;
+
+	display: flex;
+	justify-content: center;
+	column-gap: 12px;
+
+	bottom: 20px;
+}
+
+#submitButton {
+	width: 80px;
+	 -webkit-transition: -webkit-transform .4s ease-in-out;
+	 transition: transform .4s ease-in-out;
+}
+
+#submitButton:hover {
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+#text {
+	width: 80%;
+
+	text-shadow:
+	-0.075vw -0.075vw 0.075vw #353535,
+	0 -0.075vw 0.075vw #353535,
+	0.075vw -0.075vw 0.075vw #353535,
+	0.075vw 0 0.075vw #353535,
+	0.075vw 0.075vw 0.075vw #353535,
+	0 0.075vw 0.075vw #353535,
+	-0.075vw 0.075vw 0.075vw #353535,
+	-0.075vw 0 0.075vw #353535;
+	color: #353535;
+
+	position: fixed;
+	top: 0;
+
+	margin: 10px;
+	text-align: left;
+}
+
+/* СТАРТОВЫЙ ЭКРАН */
+
+.startPage {
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+	position: absolute;
+	z-index: 2;
+
+	background-image: url('../weather_files/sky.png');
+}
+
+.startPage img {
+	width: 70vw;
+	animation-name: spinner;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
+}
+
+body *::selection {
+	background: #FD3A00;
+}
+
+p {
+	width: 50vw;
+	position: absolute;
+	top: 0;
+	margin-top: 20px;
+
+	font-family: "Suisse", sans-serif;
+	font-size: 28px;
+	text-transform: none;
+	letter-spacing: -0.4px;
+
+	color: #353535;
+	text-shadow:
+		-0.025vw -0.025vw 0.025vw #353535,
+		0 -0.025vw 0.025vw #353535,
+		0.025vw -0.025vw 0.025vw #353535,
+		0.025vw 0 0.075vw #353535,
+		0.025vw 0.025vw 0.025vw #353535,
+		0 0.025vw 0.025vw #353535,
+		-0.025vw 0.025vw 0.075vw #353535,
+		-0.025vw 0 0.025vw #353535;
+}
+
+/* АНИМАЦИИ */
+
+@-webkit-keyframes spinner {
+  from {
+    -webkit-transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(-360deg);
+  }
+}
+
+
+
+/* АДАПТИВ */
+@media only screen and (min-width: 320px) and (max-width: 768px)  {
+	body * {
+		font-size: 46px;
+	}
+
+	p {
+    width: 95vw;
+		font-size: 20px;
+	}
+
+	.startPage img {
+    width: 90vw;
+	}
+
+	input {
+    height: 24px;
+		width: 50%;
+
+		font-size: 15px;
+    letter-spacing: -0.1px;
+	}
+
+	#submitButton {
+    width: 58px;
+	}
+}

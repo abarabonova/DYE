@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+    <title>DYE</title>
+    <link rel="stylesheet" type="text/css" href="./weather_files/style.css" />
+    <link rel="icon" href="./weather_files/favicon.png" type="image/ico">
+    <script type="text/javascript" async="" src="./weather_files/analytics.js"></script>
+    <script async="" src="./weather_files/js"></script>
+
+    <script src="./weather_files/jquery.js"></script>
+    <script src="./weather_files/mini.js"></script>
+  </head>
+
+  <body>
+    <div class="startPage">
+      <p>Сгенерируй градиент на&nbsp;основе погоды и&nbsp;местоположения</p>
+      <img src="weather_files/dye-logo-11.svg" alt="лого">
+    </div>
+    <div id="text">
+      <h1 id="bg"><span class="name"></span></h1>
+      <h1 id="bg">
+        <span class="temp"></span>
+        <span class="wind"></span>
+        <span class="humid"></span>
+
+        <span id="time"></span>
+      </h1>
+    </div>
+
+    <form id="zip" onsubmit="gettingJSON(); return false;">
+      <input
+        id="getZip"
+        type="text"
+        name="fname"
+        placeholder="Почтовый индекс города"
+        style="display: inline-block;"
+      />
+      <img
+      src="./weather_files/star.svg"
+      id="submitButton"
+      type="button"
+      onclick="gettingJSON()"
+      value="Го"
+      style="display: inline-block; cursor: pointer;"
+      alt="./weather_files/star.svg">
+    </form>
+  </body>
+</html>
