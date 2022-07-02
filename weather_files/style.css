@@ -151,6 +151,23 @@ p {
 		-0.025vw 0 0.025vw #353535;
 }
 
+.loader-wrapper {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+.loader-wrapper * {
+	width: 80px;
+	animation-name: loading;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 2s;
+}
+
 /* АНИМАЦИИ */
 
 @-webkit-keyframes spinner {
@@ -161,6 +178,16 @@ p {
     -webkit-transform: rotateY(-360deg);
   }
 }
+
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
 
 
 
@@ -173,6 +200,16 @@ p {
 	p {
     width: 95vw;
 		font-size: 20px;
+
+		text-shadow:
+		-0.19vw -0.19vw 0.19vw #353535,
+		0 -0.19vw 0.19vw #353535,
+		0.19vw -0.19vw 0.19vw #353535,
+		0.19vw 0 0.19vw #353535,
+		0.19vw 0.19vw 0.19vw #353535,
+		0 0.19vw 0.19vw #353535,
+		-0.19vw 0.19vw 0.19vw #353535,
+		-0.19vw 0 0.19vw #353535;
 	}
 
 	.startPage img {
@@ -181,7 +218,7 @@ p {
 
 	input {
     height: 24px;
-		width: 50%;
+		width: 60%;
 
 		font-size: 15px;
     letter-spacing: -0.1px;
@@ -189,5 +226,27 @@ p {
 
 	#submitButton {
     width: 58px;
+	}
+
+
+	#text {
+		width: 90%;
+
+		text-shadow:
+		-0.3vw -0.3vw 0.3vw #353535,
+		0 -0.3vw 0.3vw #353535,
+		0.3vw -0.3vw 0.3vw #353535,
+		0.3vw 0 0.3vw #353535,
+		0.3vw 0.3vw 0.3vw #353535,
+		0 0.3vw 0.3vw #353535,
+		-0.3vw 0.3vw 0.3vw #353535,
+		-0.3vw 0 0.3vw #353535;
+		color: #353535;
+
+		position: fixed;
+		top: 0;
+
+		margin: 10px 12px;
+		text-align: left;
 	}
 }
