@@ -25,7 +25,7 @@ body * {
   margin: 0;
   line-height: 1;
   text-transform: uppercase;
-  letter-spacing: -0.8px;
+  letter-spacing: -2px;
 	cursor: url("cursor-gradient.png"), auto;
 }
 
@@ -202,18 +202,18 @@ p {
 		font-size: 20px;
 
 		text-shadow:
-		-0.19vw -0.19vw 0.19vw #353535,
-		0 -0.19vw 0.19vw #353535,
-		0.19vw -0.19vw 0.19vw #353535,
-		0.19vw 0 0.19vw #353535,
-		0.19vw 0.19vw 0.19vw #353535,
-		0 0.19vw 0.19vw #353535,
-		-0.19vw 0.19vw 0.19vw #353535,
-		-0.19vw 0 0.19vw #353535;
+		-0.09vw -0.09vw 0.09vw #353535,
+		0 -0.09vw 0.09vw #353535,
+		0.09vw -0.09vw 0.09vw #353535,
+		0.09vw 0 0.09vw #353535,
+		0.09vw 0.09vw 0.09vw #353535,
+		0 0.09vw 0.09vw #353535,
+		-0.09vw 0.09vw 0.09vw #353535,
+		-0.09vw 0 0.09vw #353535;
 	}
 
 	.startPage img {
-    width: 90vw;
+    width: 96vw;
 	}
 
 	input {
@@ -233,14 +233,14 @@ p {
 		width: 90%;
 
 		text-shadow:
-		-0.3vw -0.3vw 0.3vw #353535,
-		0 -0.3vw 0.3vw #353535,
-		0.3vw -0.3vw 0.3vw #353535,
-		0.3vw 0 0.3vw #353535,
-		0.3vw 0.3vw 0.3vw #353535,
-		0 0.3vw 0.3vw #353535,
-		-0.3vw 0.3vw 0.3vw #353535,
-		-0.3vw 0 0.3vw #353535;
+		-0.2vw -0.2vw 0.2vw #353535,
+		0 -0.2vw 0.2vw #353535,
+		0.2vw -0.2vw 0.2vw #353535,
+		0.2vw 0 0.2vw #353535,
+		0.2vw 0.2vw 0.2vw #353535,
+		0 0.2vw 0.2vw #353535,
+		-0.2vw 0.2vw 0.2vw #353535,
+		-0.2vw 0 0.2vw #353535;
 		color: #353535;
 
 		position: fixed;
